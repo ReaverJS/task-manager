@@ -1,18 +1,26 @@
 <template>
 	<div class="app">
-		<LayoutWidget position="top"></LayoutWidget>
+		<LayoutWidget position="top">
+			<WidgetsDock/>
+		</LayoutWidget>
 
 		<div class="main-wrapper">
-			<LayoutWidget position="left"></LayoutWidget>
+			<LayoutWidget position="left" align="center">
+				<WidgetsDock/>
+			</LayoutWidget>
 
 			<main>
 				<Nuxt/>
 			</main>
 
-			<LayoutWidget position="right"></LayoutWidget>
+			<LayoutWidget position="right">
+				<WidgetsDock/>
+			</LayoutWidget>
 		</div>
 
-		<LayoutWidget position="bottom"></LayoutWidget>
+		<LayoutWidget position="bottom">
+			<WidgetsDock/>
+		</LayoutWidget>
 
 	</div>
 </template>
@@ -42,6 +50,8 @@ export default {
 main {
 	border-radius: $radius;
 	background-color: $light;
+	background-image: url("~assets/images/bg.jpg");
+	background-size: cover;
 	padding: $margin;
 	height: 100%;
 	width: 100%;

@@ -1,9 +1,7 @@
 <template>
 	<div class="widget" ref="widget" :class="`${position} ${opened ? 'opened' : ''}`">
 		<div class="content-wrapper" ref="contentWrapper" :class="align">
-			<div class="dummy" style="width: 300px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid assumenda autem consequuntur
-				fuga nisi numquam odio possimus, quibusdam soluta!
-			</div>
+			<slot></slot>
 		</div>
 		<button @click="test">asd</button>
 	</div>
@@ -142,13 +140,6 @@ export default {
 }
 
 
-
-
-.dummy {
-	padding: $margin;
-	background-color: $light;
-	border-radius: $radius;
-}
 
 button {
 	position: fixed;
